@@ -1,12 +1,11 @@
 // initial commit
-var today = moment().format("ddd, MMM Do YYYY");
+var today = moment().format("dddd, MMM Do YYYY");
 var currentTime = moment().hour();
 $("#currentDay").html(today);
 
 $(".saveBtn").on("click", function () {
-  console.log(this);
   let time = $(this).parent().attr("id");
-  let text = $(this).siblings("description").val();
+  let text = $(this).siblings(".description").val();
   localStorage.setItem(time, text);
 });
 
