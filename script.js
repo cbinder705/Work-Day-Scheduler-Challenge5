@@ -11,7 +11,7 @@ $(".saveBtn").on("click", function () {
 
 // block colors
 $(".time-block").each(function () {
-  let blockTime = parseInt($(this).attr("id").split("hour")[1]);
+  let blockTime = parseInt($(this).attr("id").split("hour")[1]); // trying to return an integer
 
   if (blockTime === currentTime) {
     $(this).addClass("present");
