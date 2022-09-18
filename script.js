@@ -1,16 +1,33 @@
 // initial commit
 var today = moment().format("ddd, MMM Do YYYY");
-
+var currentTime = moment().hour();
 $("#currentDay").html(today);
 
-const saveButton = $(".saveBtn").on("click", function () {
+$(".saveBtn").on("click", function () {
   console.log(this);
   let time = $(this).parent().attr("id");
   let text = $(this).siblings("description").val();
+  localStorage.setItem(time, text);
 });
 
 // block colors
-function tBlockColors() {}
+$(".time-block").each(function () {
+  let blockTime = parseInt($(this).attr("id").split("hour")[1]);
+
+  if (blockTime === currentTime) {
+    $(this).addClass("present");
+    $(this).removeClass("future");
+    $(this).removeClass("past");
+  } else if (blockTime < currentTime) {
+    $(this).addClass("past");
+    $(this).removeClass("future");
+    $(this).removeClass("present");
+  } else {
+    $(this).addClass("future");
+    $(this).removeClass("present");
+    $(this).removeClass("past");
+  }
+});
 
 // local storage stuff
 $("#hour9.description").val(localStorage.getItem("hour9"));
