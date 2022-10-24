@@ -9,9 +9,9 @@ $(".saveBtn").on("click", function () {
   localStorage.setItem(time, text);
 });
 
-// block colors
+// time-coded block colors
 $(".time-block").each(function () {
-  let blockTime = parseInt($(this).attr("id").split("hour")[1]); // trying to return an integer
+  let blockTime = parseInt($(this).attr("id").split("hour")[1]); //returns integer
 
   if (blockTime === currentTime) {
     $(this).addClass("present");
@@ -28,7 +28,7 @@ $(".time-block").each(function () {
   }
 });
 
-// local storage stuff
+// local storage
 $("#hour9.description").val(localStorage.getItem("hour9"));
 $("#hour10.description").val(localStorage.getItem("hour10"));
 $("#hour11.description").val(localStorage.getItem("hour11"));
