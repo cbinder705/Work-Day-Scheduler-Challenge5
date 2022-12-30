@@ -24,7 +24,7 @@ THEN I can enter an event
 WHEN I click the save button for that time block
 THEN the text for that event is saved in local storage.
 WHEN I refresh the page
-THEN the saved events persist
+THEN the saved events persist.
 
 ![WDS-image] (images\wds ss.png)
 https://github.com/cbinder705/Work-Day-Scheduler-Challenge5
