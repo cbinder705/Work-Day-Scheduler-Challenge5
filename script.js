@@ -1,4 +1,3 @@
-// initial commit
 var today = moment().format("dddd, MMM Do YYYY");
 var currentTime = moment().hour();
 $("#currentDay").html(today);
@@ -28,7 +27,7 @@ $(".time-block").each(function () {
   }
 });
 
-// local storage
+// local storage stuff
 $("#hour9.description").val(localStorage.getItem("hour9"));
 $("#hour10.description").val(localStorage.getItem("hour10"));
 $("#hour11.description").val(localStorage.getItem("hour11"));
